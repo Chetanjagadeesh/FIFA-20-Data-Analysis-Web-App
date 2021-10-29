@@ -9,7 +9,7 @@ st.sidebar.write('Predicting **Player Overall Rating ** and **Player Position** 
  
 st.sidebar.markdown("""---""")
 
-page = st.sidebar.radio("**Click on the button below to perform the task**", ("Predict Overall Rating", "Predict Player Position"))
+page = st.sidebar.radio("Click on the button below to perform the task", ("Predict Overall Rating", "Predict Player Position"))
 
 if page == "Predict Overall Rating":
     show_predict_page()
