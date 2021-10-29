@@ -37,7 +37,7 @@ def position(y):
     elif y==2:
         return 'Midfielder'
     else:
-        return 'Forward Position'
+        return 'Forward'
 
 
 def show_position_prediction():
