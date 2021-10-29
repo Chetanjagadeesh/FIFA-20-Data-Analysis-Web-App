@@ -31,7 +31,7 @@ def clean_X_values(x_value):
 
 def position(y):
     if y==0:
-        return 'Goalkepper'
+        return 'Goalkeeper'
     elif y==1:
         return 'Defender'
     elif y==2:
