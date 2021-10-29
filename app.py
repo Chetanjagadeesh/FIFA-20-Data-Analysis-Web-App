@@ -73,7 +73,7 @@ def show_predict_page():
 
 
 
-    teams = ['FC Barcelona','FC Bayern München','Real Madrid','Paris Saint-Germain','Juventus','Manchester City','Liverpool FC']
+    teams = ['FC Barcelona','FC Bayern München','Real Madrid','Paris Saint-Germain','Juventus','Manchester City','Liverpool']
 
 
     team_selected=st.selectbox("Select the team down to get list of players in that club",teams)
@@ -98,12 +98,15 @@ def show_predict_page():
     player_photo_selected=player_photo_team[player_photo_team['Short_Name'].str.lstrip()==result]
     player_photo_url=player_photo_selected['Image']
  
-    response = requests.get(player_photo_url.iloc[0])
-    image_bytes = io.BytesIO(response.content)
+    if player_photo_url is null:
+         st.write('No photo available')
+    else:
+        response = requests.get(player_photo_url.iloc[0])
+        image_bytes = io.BytesIO(response.content)
 
-    img = PIL.Image.open(image_bytes)
+        img = PIL.Image.open(image_bytes)
     
-    st.image(img,width=200,caption=result)
+        st.image(img,width=200,caption=result)
     
 
     st.subheader("💪All the attributes of the selected player")
