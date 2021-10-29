@@ -19,3 +19,9 @@ else:
     show_position_prediction()
 
 st.sidebar.markdown("""---""")
+
+st.sidebar.header('AI-1 Project: Let's Play FIFA⚽')
+st.sidebar.subheader('1.Chetan Jagadeesh')
+st.sidebar.subheader('2.Krishna Chaitanya Velaga')
+st.sidebar.subheader('3.Nivas Ramisetty')
+st.sidebar.subheader('4.Sahil Joshi')
