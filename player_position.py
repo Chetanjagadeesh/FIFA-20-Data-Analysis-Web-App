@@ -116,7 +116,7 @@ def show_position_prediction():
     st.text("")
 
 
-    st.subheader(f'🥇The Actual Position of the {result} is   **{position(y.values)}**')
+    st.subheader(f'🥇The Actual Position of {result} is   **{position(y.values)}**')
 
     y_pred=regressor.predict(X)
     st.text("")
