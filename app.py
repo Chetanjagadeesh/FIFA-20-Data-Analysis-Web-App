@@ -98,7 +98,7 @@ def show_predict_page():
     player_photo_selected=player_photo_team[player_photo_team['Short_Name'].str.lstrip()==result]
     player_photo_url=player_photo_selected['Image']
  
-    if player_photo_url is null:
+    if not player_photo_url:
          st.write('No photo available')
     else:
         response = requests.get(player_photo_url.iloc[0])
